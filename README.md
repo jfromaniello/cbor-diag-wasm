@@ -2,6 +2,8 @@ Returns cbor diagnostic notation from a given cbor in hex string format.
 
 This module is built for node.js and the browser using webassembly and the rust implementation [cbor-diag](https://github.com/cabo/cbor-diag).
 
+Inspired by https://cbor.nemo157.com/ and https://github.com/Nullus157/cbor.nemo157.com
+
 ## Installation
 
 ```
