@@ -5,6 +5,11 @@
     "name": "José F. Romaniello",
     "email": "jfromaniello@gmail.com"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfromaniello/cbor-diag-wasm.git"
+  },
   "files": [
     "dist/**/package.json",
     "dist/**/*.js",

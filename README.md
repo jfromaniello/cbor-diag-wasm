@@ -10,7 +10,7 @@ npm i cbor-diag-wasm --save
 
 ## Usage
 
-```
+```js
 import init, { parse_hex } from 'cbor-diag-wasm';
 
 // this must be called in browser envs
