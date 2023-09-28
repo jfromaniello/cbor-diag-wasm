@@ -1,6 +1,6 @@
 {
   "name": "cbor-diag-wasm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "José F. Romaniello",
     "email": "jfromaniello@gmail.com"
