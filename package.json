@@ -1,0 +1,41 @@
+{
+  "name": "cbor-diag-wasm",
+  "version": "0.1.0",
+  "author": {
+    "name": "José F. Romaniello",
+    "email": "jfromaniello@gmail.com"
+  },
+  "files": [
+    "dist/**/package.json",
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.wasm"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/web/cbor_diag_wasm.d.ts",
+      "bun": "./dist/web/cbor_diag_wasm.js",
+      "deno": "./dist/web/cbor_diag_wasm.js",
+      "browser": "./dist/web/cbor_diag_wasm.js",
+      "worker": "./dist/web/cbor_diag_wasm.js",
+      "require": "./dist/nodejs/cbor_diag_wasm.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/nodejs/cbor_diag_wasm.js",
+  "browser": "./dist/web/cbor_diag_wasm.js",
+  "types": "./dist/web/cbor_diag_wasm.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf dist/**",
+    "prepare": "build",
+    "cargo:build": "cargo build",
+    "build": "run-s cargo:build clean build:* clean:pkgjson",
+    "build:node": "wasm-pack build --target nodejs --out-dir dist/nodejs",
+    "build:web": "wasm-pack build --target web --out-dir dist/web",
+    "clean:pkgjson": "rm -rf dist/*/package.json"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
