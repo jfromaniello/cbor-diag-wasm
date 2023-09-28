@@ -28,7 +28,7 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rm -rf dist/**",
-    "prepare": "build",
+    "prepare": "run-s build",
     "cargo:build": "cargo build",
     "build": "run-s cargo:build clean build:* clean:pkgjson",
     "build:node": "wasm-pack build --target nodejs --out-dir dist/nodejs",
